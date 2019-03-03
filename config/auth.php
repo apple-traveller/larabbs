@@ -32,7 +32,7 @@ return [
     | mechanisms used by this application to persist your user's data.
     |
     | Supported: "session", "token"
-    |
+    | guards 卫兵，保护
     */
 
     'guards' => [
