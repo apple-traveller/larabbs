@@ -8,10 +8,10 @@ use App\Models\Topic;
 
 class CategoriesController extends Controller
 {
-    public function show(Category $category)
+    public function show(Category $category, Request $request, Topic $topic)
     {
         //读取分类id关联的话题并按照每页20条分页
-        $topics = Topic::where('category_id',$category->id)->paginate(20);
+        $topics = $topic->withOrder($request->order)->where('category_id',$category->id)->paginate(20);
         return view('topics.index',compact('topics','category'));
     }
 }
