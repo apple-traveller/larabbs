@@ -31,9 +31,11 @@
                             <i class="far fa-user"></i>
                             {{ $topic->user->name }}
                         </a>
+
                         <span> • </span>
                         <i class="far fa-clock"></i>
                         <span class="timeago" title="最后活跃于：{{ $topic->updated_at }}">{{ $topic->updated_at->diffForHumans() }}</span>
+
                     </small>
 
                 </div>
